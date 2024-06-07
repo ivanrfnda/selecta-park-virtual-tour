@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEBVR - Virtual Tour Taman Selecta</title>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+</head>
+
+<body>
+    <!-- Scripts -->
+    <script src="Scripts/button-component.js"></script>
+
+    <a-scene>
+        <!-- Assets -->
+        <a-assets>
+            <img id="bg" src="./Images/Spot/1-spawn.jpg">
+			<img id="arrow" src="./Images/arrow.png">
+        </a-assets>
+
+        <!-- Camera Object -->
+        <a-entity position="0 0 0" rotation="0 -186 0">
+            <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active:true" 
+            scale="" visible="">
+
+            <!-- Cursor -->
+            <a-entity id="cursor" cursor="fuse: true; fuseTimeout: 1500" position="0 0 -1" 
+                geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
+                material="color: white; shader: flat"
+
+                    animation__fusing="property: geometry.radiusOuter; from: 0.050; to: 0.010; startEvents: fusing; easing: easeInQuad; dur: 1000"
+                    animation__fusing2="property: geometry.radiusInner; from: 0.050; to: 0.005; startEvents: fusing; easing: easeInQuad; dur: 1000">
+
+                </a-entity>
+            </a-camera>
+        </a-entity>
+
+        <!-- Background -->
+        <a-sky src="#bg"></a-sky>
+
+        <!-- Welcome Text -->
+        <a-entity id= "welcome-text" position="-1 1.7 3.5" rotation="0 172 0">
+            <a-text font="kelsonsans" width="9" align="center" 
+                value="Selamat Datang di\nVirtual Tour\nTaman Selecta"
+                position="0 0.4 -1" rotation="0 0 0">
+            </a-text>
+            
+        </a-entity>
+
+        <!-- Ke Papan Awal -->
+        <a-entity id="item001" position="-0.8 0 3.5" rotation="-90 167 0"> 
+            <a-image class="itemButton" src="#arrow" transparent="true"  
+                hoverable="color:#db4035"
+                clickable="name:Papan Awal; target_url:02papanPenunjuk.html"
+                scale="" visible="">
+            </a-image>
+
+            <a-text font="kelsonsans" width="6" align="center" 
+                value="Ikuti Panah\nUntuk Melanjutkan"
+                position="0 1.5 0.1" rotation="60 0 0">
+            </a-text>
+            
+        </a-entity>
+        
+    </a-scene>
+
+</body>
+
+</html>
