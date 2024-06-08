@@ -13,12 +13,12 @@
     <a-scene>
         <!-- Assets -->
         <a-assets>
-            <img id="bg" src="./Images/Spot/3-jembatanAwal.jpg">
+            <img id="bg" src="./Images/Spot/25-jembatanPujasera.jpg">
 			<img id="arrow" src="./Images/arrow.png">
         </a-assets>
 
         <!-- Camera Object -->
-        <a-entity position="0 0 0" rotation="0 140 0">
+        <a-entity position="0 0 0" rotation="-2 140 -3">
             <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active:true" 
             scale="" visible="">
 
@@ -35,31 +35,12 @@
         <!-- Background -->
         <a-sky src="#bg"></a-sky>
 
-        <!-- Navigasi -->
-        <!-- Ke Papan-->
-        <a-entity id="item002" position="0 -1 -7.3" rotation="90 -42 0"> 
+        <!-- Ke Pujasera-->
+        <a-entity id="item001" position="4.5 -1 2" rotation="90 -42 0"> 
             <a-image class="itemButton" src="#arrow" transparent="true" 
-                position="0 4 0" rotation="0 0 70"
+                position="0 4 0" rotation="5 0 -70"
                 hoverable="color:#db4035"
-                clickable="name:Papan Penunjuk; target_url:02papanPenunjuk.html">
-            </a-image>
-        </a-entity>
-
-        <!-- Ke Taman Dino-->
-        <a-entity id="item003" position="0.5 -1 5.7" rotation="90 140 0"> 
-            <a-image class="itemButton" src="#arrow" transparent="true"
-                position="-0.8 3 0" rotation="0 0 180"
-                hoverable="color:#db4035"
-                clickable="name:Taman Dino; target_url:04tamanDino.html">
-            </a-image>
-        </a-entity>
-
-        <!-- Ke Kafe-->
-        <a-entity id="item004" position="2 -1 1.2" rotation="90 140 0"> 
-            <a-image class="itemButton" src="#arrow" transparent="true"
-                position="-0.8 3 0" rotation="0 0 40"
-                hoverable="color:#db4035"
-                clickable="name:Kafe; target_url:05kafe.html">
+                clickable="name:Pujasera; target_url:24pujasera.html">
             </a-image>
         </a-entity>
 

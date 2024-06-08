@@ -13,7 +13,7 @@
     <a-scene>
         <!-- Assets -->
         <a-assets>
-            <img id="bg" src="./Images/Spot/2-papanAwal.jpg">
+            <img id="bg" src="./Images/Spot/21-tamanAtas2.jpg">
 			<img id="arrow" src="./Images/arrow.png">
         </a-assets>
 
@@ -29,56 +29,31 @@
 
                         animation__fusing="property: geometry.radiusOuter; from: 0.050; to: 0.010; startEvents: fusing; easing: easeInQuad; dur: 1000"
                         animation__fusing2="property: geometry.radiusInner; from: 0.050; to: 0.005; startEvents: fusing; easing: easeInQuad; dur: 1000">
-
                 </a-entity>
-
         </a-entity>
 
         <!-- Background -->
         <a-sky src="#bg"></a-sky>
 
         <!-- Navigasi -->
-        <!-- Ke Jembatan-->
-        <a-entity id="item001" position="-1 0 -4" rotation="90 -42 0"> 
+        <!-- Ke Taman Atas 3-->
+        <a-entity id="item001" position="7 0 -5" rotation="90 -42 0"> 
             <a-image class="itemButton" src="#arrow" transparent="true" 
-                position="0 4 0" rotation="0 0 60"
+                position="0 4 0" rotation="0 0 -160"
                 hoverable="color:#db4035"
-                clickable="name:Jembatan; target_url:03jembatanAwal.html">
+                clickable="name:Taman Atas; target_url:22tamanAtas3.html">
             </a-image>
         </a-entity>
-        
-        <!-- Ke Gerbang-->
-        <a-entity id="item003" position="-2 -0.1 -3" rotation="90 140 0"> 
-            <a-image class="itemButton" src="#arrow" transparent="true"
-                position="-0.8 3 0" rotation="0 0 -45"
-                hoverable="color:#db4035"
-                clickable="name:Gerbang Awal; target_url:index.html">
-            </a-image>
 
-            <!-- <a-text font="kelsonsans" width="6" align="center" 
-                value="Keluar\nMuseum" color="white"
-                position="-0.8 2 0" rotation="0 180 0">
-            </a-text> -->
-
-        </a-entity>
-
-        <!-- Ke Pujasera-->
-        <a-entity id="item003" position="0 -0.5 0" rotation="90 -42 0"> 
+        <!-- Ke Pemandangan Atas-->
+        <a-entity id="item002" position="6 0 -6" rotation="90 -42 0"> 
             <a-image class="itemButton" src="#arrow" transparent="true" 
-                position="0 4 0" rotation="0 0 -50"
+                position="0 4 0" rotation="0 0 140"
                 hoverable="color:#db4035"
-                clickable="name:Pujasera; target_url:24pujasera.html">
+                clickable="name:Pemandangan Atas; target_url:20pemandanganAtas.html">
             </a-image>
         </a-entity>
 
-        <!-- Ke Kedai Makanan-->
-        <a-entity id="item004" position="1.5 -0.5 0.8" rotation="90 140 0"> 
-            <a-image class="itemButton" src="#arrow" transparent="true"
-                position="-0.8 3 0" rotation="0 0 50"
-                hoverable="color:#db4035"
-                clickable="name:Kedai Makanan; target_url:26kedaiMakanan.html">
-            </a-image>
-        </a-entity>
     </a-scene>
 
 </body>
