@@ -15,6 +15,9 @@
         <a-assets>
             <img id="bg" src="./Images/Spot/5-kafe.jpg">
 			<img id="arrow" src="./Images/arrow.png">
+
+            <img id="kafe" src="./Images/AR/restoran.JPG">
+            <img id="suvenir" src="./Images/AR/suvenir.JPG">
         </a-assets>
 
         <!-- Camera Object -->
@@ -30,6 +33,19 @@
                         animation__fusing="property: geometry.radiusOuter; from: 0.050; to: 0.010; startEvents: fusing; easing: easeInQuad; dur: 1000"
                         animation__fusing2="property: geometry.radiusInner; from: 0.050; to: 0.005; startEvents: fusing; easing: easeInQuad; dur: 1000">
                 </a-entity>
+
+                <!-- HUD -->
+                <a-entity id="kafe-hud" position="0 0 -1" rotation="0 0 0" visible="false">
+                    <a-plane height="1.33" width="1" color="blue">
+                        <a-image src="#kafe" height="1.33" width="1"></a-image>
+                    </a-plane>
+                </a-entity>
+                <a-entity id="suvenir-hud" position="0 0 -1" rotation="0 0 0" visible="false">
+                    <a-plane height="1.33" width="1" color="blue">
+                        <a-image src="#suvenir" height="1.33" width="1"></a-image>
+                    </a-plane>
+                </a-entity>
+            </a-camera>
         </a-entity>
 
         <!-- Background -->
@@ -54,8 +70,33 @@
             </a-image>
         </a-entity>
 
+        <a-text font="kelsonsans" value="Kafe" width="10"
+            position="0 3.5 10" rotation="0 180 0" align="center">
+        </a-text>
+
+        <!-- <a-entity geometry="primitive: plane; height: 1.0; width: 4.0"
+            material="color:grey; side: double; opacity:100;" 
+            position="9 3.5 -13" rotation="0 135 0">
+        </a-entity> -->
+        <a-text font="kelsonsans" value="Toko Suvenir" width="10"
+            position="9 3.5 -13" rotation="0 -45 0" align="center">
+        </a-text>
+
+        <!-- AR -->
+        <a-entity id="ar001" position="-3.1 0 1.3" rotation="0 100 0"> 
+			<a-plane class="itemInfo" opacity="0" color="grey"
+                position="-9 3.7 1" rotation="0 80 0" width="4" height="1"
+                info-block="name:Kafe; target_id:kafe-hud">
+            </a-plane>
+        </a-entity>
+
+        <!-- <a-entity id="ar002" position="0 0 0" rotation="0 100 0"> 
+			<a-plane class="itemInfo" opacity="100" color="blue"
+                position="10 3.5 10" rotation="0 225 0" width="4" height="1"
+                info-block="name:Suvenir; target_id:suvenir-hud">
+            </a-plane>
+        </a-entity> -->
     </a-scene>
 
 </body>
-
 </html>
