@@ -1,2 +1,2 @@
 # selecta-park-virtual-tour
-Akses program menggunakan localhost
+access the program using localhost
